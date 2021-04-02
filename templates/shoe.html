@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shoe</title>
+</head>
+<body>
+<a-scene>
+  <a-asset-item id="shoe_model" src="{{url_for('static',filename='shoe2.glb')}}">
+  </a-asset-item>
+  <a-entity id="vr_view" gltf-model="#shoe_model" position="0 1.5  -1"></a-entity>
+  <a-sky color="#ffff"></a-sky>
+</a-scene>  
+</body>
+</html>
+
+<!-- 192.168.43.223 -->
