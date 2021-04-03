@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  
+  
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headphone</title>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+<body>
+<a-scene>
+  <a-camera>
+    <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
+  </a-camera>
+  <a-asset-item id="headset_model" src="{{url_for('static',filename='headsets2.glb')}}">
+  </a-asset-item>
+  <a-entity id="vr_view" gltf-model="#headset_model" position="0 1.5 -1"></a-entity>
+  <a-sky color="#1383ff"></a-sky>
+  <a-entity 
+  text="value:Headphones:
+  
+  Boat Rockerzz 450
+  Price : 1300 INR
+
+  Immerse your senses with high 
+  definition immersive audios. 
+  Seamless intergrated control
+  with adaptive ergonomic ear cups.;"
+  position="-3 1.5 -4"
+  scale="3 3 3 ">
+  <a-box color="tomato" depth="0" height="1" width="1.5"
+  position= "-1.1 0 -1" ></a-box></a-entity>
+
+  <a-image src="{{url_for('static',filename='images/btn/btn_cart.png')}}" position="-2.7 0 -3"
+  scale="0.7 0.7 0.7" accessories="" >
+</a-image>
+
+</a-scene>  
+<div id="snackbar">Item Added To Cart</div>
+
+</body>
+</html>

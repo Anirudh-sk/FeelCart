@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bag</title>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+<body>
+<a-scene><a-camera>
+        <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
+      </a-camera>
+  <a-asset-item id="bag_model" src="{{url_for('static',filename='bag.glb')}}">
+  </a-asset-item>
+  <a-entity id="vr_view" gltf-model="#bag_model" position="0 1.5 -1"></a-entity>
+  <a-sky color="#1383ff"></a-sky>
+  <a-entity 
+  text="value:Bag 
+
+  Louis Vuitton Onthego GM
+  Price : 7500 INR
+
+  This OnTheGo GM tote bag 
+  is made from colored Monogram 
+  Giant canvas and is 
+  accessorized with a colorful 
+  leather flower charm. Roomy 
+  and comfortable to carry 
+  thanks to its shoulder straps 
+  and rolled leather top handles, 
+  this tote is perfect for 
+  everyday use. Numerous inside 
+  pockets including a zipped 
+  flat pocket keep 
+  essentials organized.;"
+  position="-3 1.5 -4"
+  scale="3 3 3 ">
+
+  <a-box color="tomato" depth="0" height="1.6" width="1.9"
+  position= "-1.1 0 -1" ></a-box></a-entity></a-entity>
+  <a-image src="{{url_for('static',filename='images/btn/btn_cart.png')}}" position="-3.5 0 -3"
+  scale="0.7 0.7 0.7" accessories="" >
+</a-image>
+
+</a-scene> 
+<div id="snackbar">Item Added To Cart</div>
+
+</body>
+</html>

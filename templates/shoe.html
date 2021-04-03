@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  
+  
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>shoe</title>
+  <title>Shoe</title>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 <body>
 <a-scene>
+  <a-camera>
+    <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
+  </a-camera>
+  <a-assets>
+
+    <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+  </a-assets>
+  <!--<a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>-->
   <a-asset-item id="shoe_model" src="{{url_for('static',filename='shoe2.glb')}}">
   </a-asset-item>
   <a-entity id="vr_view" gltf-model="#shoe_model" position="0 1.5  -1"></a-entity>
-  <a-sky color="#ffff"></a-sky>
+  <a-sky src="#groundTexture"></a-sky>
+  <a-entity 
+  text="value:Shoes :
+
+  Reebok Active Sport G9
+  Price : INR 4999
+
+  Extremely lightweight material, 
+  these are nice shoes for 
+  everyday use, or wedding .
+  This unique design and 
+  stylish shoes are to maximize 
+  your fashion. Ethics aims 
+  to help you dress in 
+  your own unique upgraded 
+  style. So keep shopping 
+  and flaunt your style.;"
+  position="-3 1.7 -4"
+  scale="3 3 3 ">
+
+  <a-box color="tomato" depth="0" height="1.4" width="1.5"
+  position= "-1.1 0 -1" ></a-box></a-entity></a-entity>
+
+  <a-image src="{{url_for('static',filename='images/btn/btn_cart.png')}}" position="-3 0.3 -3"
+  scale="0.7 0.7 0.7" accessories="" >
+</a-image>
+
 </a-scene>  
+<div id="snackbar">Item Added To Cart</div>
+
 </body>
 </html>
-
-<!-- 192.168.43.223 -->

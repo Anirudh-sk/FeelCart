@@ -1,10 +1,12 @@
 <html>
   <head>
+    
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script>
       AFRAME.registerComponent('accessories', {
         init: function () {
           this.el.addEventListener('click', function (evt) {
+            
             window.location="http://localhost:5000/"
           });
         },
@@ -50,5 +52,7 @@
   scale="0.7 0.7 0.7" gadget="" >
 </a-image> 
       </a-scene>
+      <!-- <div id="snackbar">Item Added To Cart</div> -->
+
   </body>
 </html>

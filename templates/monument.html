@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  
+  
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monument</title>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+<body>
+<a-scene>
+  <a-camera>
+    <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
+  </a-camera>
+  <a-asset-item id="monu_model" src="{{url_for('static',filename='monu.glb')}}">
+  </a-asset-item>
+  <a-entity id="vr_view" gltf-model="#monu_model" position="0 1.5 -1">
+  </a-entity>
+  <a-sky color="#1383ff"></a-sky>
+  <a-entity 
+  text="value:Handicrafts : 
+  
+  Khadi krafts
+  Price : 3999 INR 
+  India is rich and varied in its 
+  culture and traditions, and making 
+  your living space look beautiful 
+  with Indian elements is not as 
+  tough as it might sound. We all 
+  know our home is an extension of 
+  our personal style. But what about 
+  when it’s time for an update? It 
+  can be tough to keep up with 
+  the latest design trends.;"position="-3 1.5 -4"
+  scale="3 3 3 ">
+  <a-box color="tomato" depth="0" height="1.3" width="1.5"
+  position= "-1.1 0 -1" ></a-box></a-entity>
+  <a-image src="{{url_for('static',filename='images/btn/btn_cart.png')}}" position="-2.8 0 -3"
+  scale="0.7 0.7 0.7" accessories="" >
+</a-image>
+</a-scene>
+<div id="snackbar">Item Added To Cart</div>
+
+</body>
+</html>

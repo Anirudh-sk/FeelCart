@@ -26,11 +26,11 @@ def watch():
     #     return render_template('index.html')
     return render_template('watch.html')
 
-@app.route('/handbag',methods=['GET','POST'])
-def handbag():
+@app.route('/bag',methods=['GET','POST'])
+def bag():
     # if request.method=='POST':
     #     return render_template('index.html')
-    return render_template('handbag.html')
+    return render_template('bag.html')
 
 @app.route('/headset',methods=['GET','POST'])
 def headset():
@@ -38,29 +38,29 @@ def headset():
     #     return render_template('index.html')
     return render_template('headset.html')
 
-@app.route('/earring',methods=['GET','POST'])
-def earring():
+@app.route('/Earring',methods=['GET','POST'])
+def Earring():
     # if request.method=='POST':
     #     return render_template('index.html')
-    return render_template('earring.html')
+    return render_template('Earring.html')
 
 @app.route('/necklace',methods=['GET','POST'])
 def necklace():
     # if request.method=='POST':
     #     return render_template('index.html')
-    return render_template('necklace.html')
+    return render_template('choker.html')
 
-@app.route('/shirt',methods=['GET','POST'])
-def shirt():
+@app.route('/Shirt',methods=['GET','POST'])
+def Shirt():
     # if request.method=='POST':
     #     return render_template('index.html')
-    return render_template('shirt.html')
+    return render_template('Shirt.html')
 
 @app.route('/craft',methods=['GET','POST'])
 def craft():
     # if request.method=='POST':
     #     return render_template('index.html')
-    return render_template('craft.html')
+    return render_template('monument.html')
 
 if __name__ == '__main__':
     app.run(port=5000,debug=True)

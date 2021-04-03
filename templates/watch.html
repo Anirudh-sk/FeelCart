@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  
+  
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch</title>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+<body>
+<a-scene>
+  <a-camera>
+    <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
+  </a-camera>
+  <a-asset-item id="watch_model" src="{{url_for('static',filename='watch.glb')}}">
+  </a-asset-item>
+  <a-entity id="vr_view" gltf-model="#watch_model" position="0 1.5 -1">
+  </a-entity>
+  <a-sky color="#1383ff"></a-sky>
+  <a-entity 
+  text="value:Watch :
+
+  Fastrack SG Sport 760
+  Price : 1799 INR
+
+  Show off your cool sense of style to your 
+  social media followers with this funky 
+  silicone strap watch. 
+  The yellow tone looks eye-popping 
+  against the glossy black of the dial, 
+  while the violet accents add a splash of colour.;"
+  position="-4 1.5 -4"
+  scale="3 3 3 ">
+  <a-box color="tomato" depth="0" height="1.2" width="1.9"
+  position= "-1.1 0 -1" ></a-box></a-entity>
+  <a-image src="{{url_for('static',filename='images/btn/btn_cart.png')}}" position="-3.4 0 -3"
+  scale="0.7 0.7 0.7" accessories="" >
+</a-image>
+</a-scene>  
+<div id="snackbar">Item Added To Cart</div>
+
+</body>
+</html>
