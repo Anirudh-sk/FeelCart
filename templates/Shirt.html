@@ -16,13 +16,16 @@
   <a-camera>
     <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
   </a-camera>
+  <a-assets>
+    <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+  </a-assets>
   <a-asset-item id="fshirt_model" src="{{url_for('static',filename='Shirt.glb')}}">
   </a-asset-item>
   <a-asset-item id="mshirt_model" src="{{url_for('static',filename='Jersey.glb')}}">
   </a-asset-item>
   <a-entity id="vr_view" gltf-model="#fshirt_model" position="1 1.4 -1" ></a-entity>
   <a-entity id="vr_view" gltf-model="#mshirt_model" position="0.3 1.2 -1" ></a-entity>
-  <a-sky color="#1383ff"></a-sky>
+  <a-sky src="#groundTexture"></a-sky>
   <a-entity
   text="value:Jersey:
 
@@ -36,17 +39,17 @@
   at crew neck,chain stitch at dropped 
   front shoulder.
   Embroidered Reebok logo at left chest.
-  Regular fit."
+  Regular fit.;font:mozillavr"
   position="-3 1.5 -4"
   scale="3 3 3 ">
-  <a-box color="tomato" depth="0" height="1.4" width="1.7"
+  <a-box color="#29b6f6" depth="0" height="1.4" width="1.7"
   position= "-1.1 0 -1" ></a-box></a-entity>
 
   <a-image src="{{url_for('static',filename='images/btn/btn_cart.png')}}" position="-2.8 0 -3"
   scale="0.7 0.7 0.7" accessories="" >
 </a-image></a-entity>
 </a-scene>  
-<div id="snackbar">Item Added To Cart</div>
+<div id="snackbar" style="background-color:  #4caf50;">Item Added To Cart</div>
 
 </body>
 </html>

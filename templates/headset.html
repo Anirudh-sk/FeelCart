@@ -16,10 +16,13 @@
   <a-camera>
     <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
   </a-camera>
+  <a-assets>
+    <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+  </a-assets>
   <a-asset-item id="headset_model" src="{{url_for('static',filename='headsets2.glb')}}">
   </a-asset-item>
   <a-entity id="vr_view" gltf-model="#headset_model" position="0 1.5 -1"></a-entity>
-  <a-sky color="#1383ff"></a-sky>
+  <a-sky src="#groundTexture"></a-sky>
   <a-entity 
   text="value:Headphones:
   
@@ -29,10 +32,10 @@
   Immerse your senses with high 
   definition immersive audios. 
   Seamless intergrated control
-  with adaptive ergonomic ear cups.;"
+  with adaptive ergonomic ear cups.;font:mozillavr"
   position="-3 1.5 -4"
   scale="3 3 3 ">
-  <a-box color="tomato" depth="0" height="1" width="1.5"
+  <a-box color="#29b6f6" depth="0" height="1" width="1.5"
   position= "-1.1 0 -1" ></a-box></a-entity>
 
   <a-image src="{{url_for('static',filename='images/btn/btn_cart.png')}}" position="-2.7 0 -3"

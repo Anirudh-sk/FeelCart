@@ -14,10 +14,14 @@
 <a-scene><a-camera>
         <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
       </a-camera>
+      <a-assets>
+        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      </a-assets>
   <a-asset-item id="bag_model" src="{{url_for('static',filename='bag.glb')}}">
   </a-asset-item>
   <a-entity id="vr_view" gltf-model="#bag_model" position="0 1.5 -1"></a-entity>
-  <a-sky color="#1383ff"></a-sky>
+  
+  <a-sky src="#groundTexture"></a-sky>
   <a-entity 
   text="value:Bag 
 
@@ -36,18 +40,18 @@
   everyday use. Numerous inside 
   pockets including a zipped 
   flat pocket keep 
-  essentials organized.;"
+  essentials organized.;font:mozillavr"
   position="-3 1.5 -4"
   scale="3 3 3 ">
 
-  <a-box color="tomato" depth="0" height="1.6" width="1.9"
+  <a-box color="#29b6f6" depth="0" height="1.6" width="1.9"
   position= "-1.1 0 -1" ></a-box></a-entity></a-entity>
   <a-image src="{{url_for('static',filename='images/btn/btn_cart.png')}}" position="-3.5 0 -3"
   scale="0.7 0.7 0.7" accessories="" >
 </a-image>
 
 </a-scene> 
-<div id="snackbar">Item Added To Cart</div>
+<div id="snackbar" style="background-color:  #4caf50;">Item Added To Cart</div>
 
 </body>
 </html>
