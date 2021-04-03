@@ -48,7 +48,7 @@ def Earring():
 def necklace():
     # if request.method=='POST':
     #     return render_template('index.html')
-    return render_template('choker.html')
+    return render_template('chocker.html')
 
 @app.route('/Shirt',methods=['GET','POST'])
 def Shirt():
