@@ -6,7 +6,7 @@ app=Flask(__name__)
 def home():
     # if request.method=='POST':
     #     return render_template('index.html')
-    return render_template('home.html')
+    return render_template('homepage.html')
 
 @app.route('/categories',methods=['GET','POST'])
 def categories():

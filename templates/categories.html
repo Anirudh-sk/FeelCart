@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+      AFRAME.registerComponent('accessories', {
+        init: function () {
+          this.el.addEventListener('click', function (evt) {
+            window.location="http://localhost:5000/"
+          });
+        },
+      });
+      AFRAME.registerComponent('apparel', {
+        init: function () {
+          this.el.addEventListener('click', function (evt) {
+            window.location="http://localhost:5000/"
+          });
+        },
+      });
+      AFRAME.registerComponent('gadget', {
+        init: function () {
+          this.el.addEventListener('click', function (evt) {
+            window.location="http://localhost:5000/"
+          });
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <a-scene>
+      <a-camera>
+        <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
+      </a-camera>
+      <a-sky
+        src="{{url_for('static',filename='images/tu09tpc-a-large-bed-in-a-room.jpeg')}}"
+        rotation="0 90 0"
+        scale="2 2 2"
+      ></a-sky>
+      <a-text
+      text="value: Categories;font: dejavu;"
+        position="-2 2 -4"
+        scale="3 3 3"
+      ></a-text>
+      <a-image src="{{url_for('static',filename='images/btn/btn_accessories.png')}}" position="-2 0 -3"
+      scale="0.7 0.7 0.7" accessories="" >
+    </a-image>
+      <a-image src="{{url_for('static',filename='images/btn/btn_apparel.png')}}" height="1" position="-0 0 -3"
+    scale="0.7 0.7 0.7" apparel="" >
+  </a-image> 
+  <a-image src="{{url_for('static',filename='images/btn/btn_gadget.png')}}" height="1" position="2 0 -3"
+  scale="0.7 0.7 0.7" gadget="" >
+</a-image> 
+      </a-scene>
+  </body>
+</html>

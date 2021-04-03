@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <title>Homepage</title>
+    <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
+  <script>
+    AFRAME.registerComponent('change-color-on-click', {
+      init: function () {
+        this.el.addEventListener('click', function (evt) {
+          window.location="http://localhost:5000/categories"
+        });
+      },
+    });
+  </script>
+  </head>
+  <body>
+    <div>
+      <a-scene>
+        <a-camera>
+          <a-cursor geometry="primitive: ring" material="color: #FFC0CB;shader: flat"></a-cursor>
+        </a-camera>
+        <a-sky
+          src="{{url_for('static',filename='images/wg4necz-a-bird-sitting-on-top-of-a-building.jpeg')}}"
+          rotation="0 90 0"
+          scale="1 1 1"
+        ></a-sky>
+
+        <a-text
+          text="value: Welcome to feelmart;font: roboto;"
+          position="-3 2 -4"
+          scale="3 3 3"
+        ></a-text>
+        <a-text
+          text="value: Shop at your Home;font: roboto;"
+          position="-2 1 -4"
+          scale="2 2 2"
+        ></a-text>
+        <a-image src="{{url_for('static',filename='images/btn_cat.png')}}" height="1" position="-0 0 -3"
+        scale="1 1 1" change-color-on-click="" >
+      </a-image>
+      </a-scene>
+    </div>
+  </body>
+</html>
