@@ -5,7 +5,6 @@ export default makeStyles(()=>({
         maxWidth: '100%',
         backgroundColor:'#212121',
         color:'#e3f2fd',
-        // height: '300px'
 
       },
       media: {

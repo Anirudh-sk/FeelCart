@@ -8,7 +8,7 @@ function Navbar({totalItems,User}) {
     const classes=makeStyles();
     const location= useLocation();
 
-    console.log(User);
+    // console.log(User);
     
     return (
         <div>

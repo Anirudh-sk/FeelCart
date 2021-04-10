@@ -8,7 +8,6 @@ import useStyles from './ProductStyle'
 function Product({product, onAddToCart}) {
 
     const [open, setOpen] = React.useState(false);
-
   const handleClick = () => {
     setOpen(true);
   };

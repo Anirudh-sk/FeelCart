@@ -9,8 +9,6 @@ export default function SimpleSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    
-    
   };
   return (
     <Slider autoplay {...settings} style={{width:'90%',marginTop:-10 ,margin:30, padding:30,marginLeft:'auto',marginRight:'auto'}}>

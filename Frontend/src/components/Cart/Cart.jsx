@@ -16,7 +16,7 @@ function Cart({cart , handleUpdateCartQty,handleEmptyCart,handleRemoveFromCart,U
         </>
     );
 
-    const FilledCart = ()=>(
+const FilledCart = ()=>(
         <>
         <Navbar  User={User}/>
         <Grid container justify="center" direction="row" spacing={3} >

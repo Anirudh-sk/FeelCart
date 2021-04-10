@@ -6,8 +6,6 @@ import Navbar from '../Navbar/Navbar';
 import SimpleSlider from "../Slider/Slider";
 
 
-
-
 function Home({products, onAddToCart,cart, User}) {
     const classes=makeStyles();
     return (

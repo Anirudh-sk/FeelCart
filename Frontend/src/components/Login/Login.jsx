@@ -3,8 +3,6 @@ import { Button, Grid } from '@material-ui/core';
 import fire from '../../fire'
 import firebase from 'firebase'
 import { AccountCircleTwoTone} from '@material-ui/icons';
-
-
 function Login({setUser}) {
     
     const onSubmit = (e)=>{

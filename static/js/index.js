@@ -2,7 +2,6 @@ AFRAME.registerComponent('accessories', {
     init: function () {
       this.el.addEventListener('click', function (evt) {
         var x = document.getElementById("snackbar")
-
     // Add the "show" class to DIV
     x.className = "show";
 
@@ -12,3 +11,5 @@ AFRAME.registerComponent('accessories', {
       });
     },
   });
+
+
